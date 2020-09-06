@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <ol id="todo-list"></ol>
+  <script>
+    var tasks = ['Купить лемонад', 'Поджарить тосты', 'Починить автомобиль', 'Сходить в кино', 'Покормить кота'];
+
+    var todo = document.getElementById("todo-list");
+
+    for (var i in tasks) {
+      var newTask = document.createElement("li");
+      newTask.innerText = tasks[i];
+      todo.appendChild(newTask);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="cart-items">
+    <div class="item">Молоко 1 л<span class="qty"> x 2</span></div>
+    <div class="item">Кола 1.5 л<span class="qty"> x 1</span></div>
+    <div class="item">Хлеб 1 булка<span class="qty"> x 2</span></div>
+    <div class="item">Сыр 250 г<span class="qty"> x 1</span></div>
+    <div class="item">Шоколад<span class="qty"> x 3</span></div>
+  </div>
+
+  <script>
+    var cartItems = document.getElementById("cart-items");
+
+    var item = document.getElementsByClassName("item");
+    item[1].remove();
+
+    var newQty = document.createElement("span");
+    newQty.className = "qty";
+    newQty.innerText = " x 4";
+
+    var newItem = document.createElement("div");
+    newItem.className = "item";
+    newItem.innerText = "Рыбные консервы";
+    newItem.appendChild(newQty);
+
+    cartItems.replaceChild(newItem, item[3]); 
+    
+  </script>
+</body>
+</html>

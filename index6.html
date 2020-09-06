@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  Дела
+  <ul id="todo"></ul>
+
+  <script>
+    var todo = document.getElementById("todo");
+
+    do {
+      var newTask = document.createElement("li");
+      newTask.innerText = prompt("Введите дело");
+      todo.appendChild(newTask);
+    } while (newTask.innerText !== null && newTask.innerText !== "");
+  </script>
+</body>
+</html>
